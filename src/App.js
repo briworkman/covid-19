@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './assets/logo.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import GlobalCard from './Components/GlobalCard';
+import Header from './Components/Header';
 
 function App() {
+  const [global, setGlobal] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`https://api.covid19api.com/summary`)
+      .then(response => {
+        setGlobal(response.data.Countries);
+      })
+      .catch(error => {
+        console.log('The data was not returned', error);
+      });
+  }, []);
+
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <a
-          href='https://ko-fi.com/W7W11K588'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <img
-            className='coffee'
-            height='40'
-            src='https://az743702.vo.msecnd.net/cdn/kofi5.png?v=2'
-            border='0'
-            alt='Buy Me a Coffee at ko-fi.com'
-          />
-        </a>
-      </header>
+      <Header />
+      <GlobalCard global={global} />
     </div>
   );
 }

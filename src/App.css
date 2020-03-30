@@ -1,6 +1,6 @@
 .App {
-  background-color: #363740;
-  height: 100vh;
+  background-color: transparent;
+  height: 100%;
 }
 
 .App-header {
@@ -17,7 +17,7 @@
 }
 
 .coffee {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,4 +33,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-container {
+  display: flex;
+  height: 484px;
+  width: 800px;
+  background-color: #3c3d59;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100%;
+}
+
+.card h1 {
+  color: white;
+  margin-left: 20px;
+}
+
+.scrollable {
+  height: 400px;
+  width: 100%;
+  overflow: scroll;
+  overflow-y: auto;
+  background: #3c3d59;
+  overflow-x: hidden;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  height: 25px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  background-color: #323140;
+  color: white;
+}
+
+th,
+td {
+  padding: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #3d3d3d;
+}
+
+.name {
+  color: white;
+}
+
+.confirmed {
+  color: green;
+}
+
+.deaths {
+  color: red;
+}
+
+.recovered {
+  color: orange;
 }
