@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import GlobalCard from './Components/GlobalCard';
 import Header from './Components/Header';
+import GlobalChart from './Components/GlobalChart';
 
 function App() {
   const [global, setGlobal] = useState([]);
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <GlobalCard global={global} />
+      <GlobalChart global={global} />
     </div>
   );
 }
