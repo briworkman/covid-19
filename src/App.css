@@ -35,68 +35,63 @@
   }
 }
 
-.card-container {
+.global-chart-container {
+  border: 2px solid #e8eaf0;
+  padding: 0px 10px 10px 10px;
+  border-radius: 10px;
+  width: 820px;
   display: flex;
-  height: 484px;
-  width: 800px;
-  background-color: #3c3d59;
-  margin-left: 20px;
-  margin-top: 20px;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.global-chart-container h3 {
+  margin-left: 40px;
+}
+
+.global-chart {
+  border-top: 1px solid #e8eaf0;
+  padding-top: 20px;
+}
+
+.cards {
+  display: flex;
+  margin: 20px;
 }
 
 .card {
-  width: 100%;
+  border: 2px solid #e8eaf0;
+  width: 200px;
+  height: 62.5px;
+  border-radius: 10px;
+  display: flex;
+  margin-right: 10px;
+  flex-direction: column;
+  line-height: 0;
+  align-content: center;
 }
 
-.card h1 {
-  color: white;
-  margin-left: 20px;
+.card h2 {
+  text-align: center;
+  margin-top: 24px;
 }
 
-.scrollable {
-  height: 400px;
-  width: 100%;
-  overflow: scroll;
-  overflow-y: auto;
-  background: #3c3d59;
-  overflow-x: hidden;
+.card p {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
 }
 
-table {
-  border-collapse: collapse;
+.new-case-numbers {
+  color: #64dd9c;
 }
 
-th {
-  height: 25px;
-  text-align: left;
-  position: sticky;
-  top: 0;
-  background-color: #323140;
-  color: white;
+.death-numbers {
+  color: #f65064;
 }
 
-th,
-td {
-  padding: 25px;
-  border-bottom: 1px solid #ddd;
-}
-
-tr:hover {
-  background-color: #3d3d3d;
-}
-
-.name {
-  color: white;
-}
-
-.confirmed {
-  color: green;
-}
-
-.deaths {
-  color: red;
-}
-
-.recovered {
-  color: orange;
+.recovered-numbers {
+  color: #449be2;
 }

@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Header from './Components/Header';
 import GlobalChart from './Components/GlobalChart';
+import TopCards from './Components/TopCards';
 
 function App() {
   const [global, setGlobal] = useState([]);
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
+      <TopCards global={global} />
       <GlobalChart global={global} />
     </div>
   );
