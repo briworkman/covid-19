@@ -40,7 +40,7 @@ const data = [
 ];
 
 const style = {
-  top: 275
+  top: 250
 };
 
 export default class RadialChart extends PureComponent {
@@ -54,9 +54,9 @@ export default class RadialChart extends PureComponent {
           width={300}
           height={300}
           cx={150}
-          cy={150}
+          cy={105}
           innerRadius={20}
-          outerRadius={125}
+          outerRadius={110}
           barSize={15}
           data={data}
         >
