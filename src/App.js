@@ -4,6 +4,8 @@ import './App.css';
 import Header from './Components/Header';
 import GlobalChart from './Components/GlobalChart';
 import TopCards from './Components/TopCards';
+import PieChartComponent from './Components/PieChart';
+import RadialChart from './Components/RadialChart';
 
 function App() {
   const [global, setGlobal] = useState([]);
@@ -21,8 +23,16 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <TopCards global={global} />
-      <GlobalChart global={global} />
+      <div className='body'>
+        <div>
+          <TopCards global={global} />
+          <GlobalChart global={global} />
+        </div>
+        <div>
+          <PieChartComponent global={global} />
+          <RadialChart />
+        </div>
+      </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function GlobalChart(props) {
 
   return (
     <div className='global-chart-container'>
-      <h3>Global Statistics</h3>
+      <h3>Statistics By Country</h3>
       <div className='global-chart'>
         <BarChart
           width={800}

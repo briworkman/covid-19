@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-minimal-pie-chart": "^7.0.0",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.4.1",
     "recharts": "^1.8.5"
