@@ -42,7 +42,9 @@ function App() {
       });
 
     axios
-      .get(`http://covid19api.xapix.io/v2/locations`)
+      .get(
+        `https://cors-anywhere.herokuapp.com/https://covid19api.xapix.io/v2/locations`
+      )
       .then(response => {
         console.log(response.data.locations);
         setCanada(response.data.locations.slice(35, 46));
