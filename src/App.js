@@ -12,6 +12,7 @@ import AustraliaChart from './Components/AustraliaChart';
 import EuropeChart from './Components/EuropeChart';
 import AfricaChart from './Components/AfricaChart';
 import LatinAmericaChart from './Components/LatinAmericaChart';
+import About from './Components/About';
 
 function App() {
   const [global, setGlobal] = useState([]);
@@ -66,9 +67,14 @@ function App() {
           <AfricaChart africa={countries} />
           <LatinAmericaChart latinAmerica={countries} />
         </div>
-        <div className='other-data'>
-          <PieChartComponent global={global} />
-          <RadialChart />
+        <div>
+          <div className='other-data-container'>
+            <div className='other-data'>
+              <PieChartComponent global={global} />
+              <RadialChart />
+            </div>
+            <About />
+          </div>
         </div>
       </div>
     </div>

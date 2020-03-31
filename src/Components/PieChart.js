@@ -29,7 +29,7 @@ export default function PieChartComponent(props) {
 
   return (
     <div className='pie-chart'>
-      <h3>Global Percentages</h3>
+      <h3>Globally</h3>
       <PieChart width={300} height={300}>
         <Legend />
         <Pie

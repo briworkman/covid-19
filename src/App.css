@@ -11,6 +11,16 @@
   background: #e8eaf0;
 }
 
+@media screen and (max-width: 900px) {
+  .App-header {
+    flex-direction: column;
+  }
+
+  .logo {
+    flex-direction: column;
+  }
+}
+
 .App-logo {
   height: 7vmin;
   pointer-events: none;
@@ -40,7 +50,6 @@
 }
 
 .logo img {
-  margin-top: 12px;
   margin-right: 10px;
 }
 
@@ -139,13 +148,6 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1560px) {
-  .other-data {
-    flex-direction: column;
-    height: 850px;
-  }
-}
-
 @media screen and (max-width: 1255px) {
   .other-data {
     flex-direction: row;
@@ -189,4 +191,12 @@
   border-bottom: 1px solid #e8eaf0;
   padding-bottom: 20px;
   width: 100%;
+}
+
+.about-container {
+  border: 2px solid #e8eaf0;
+  margin: 10px;
+  align-content: center;
+  padding-left: 20px;
+  border-radius: 10px;
 }
