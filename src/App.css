@@ -148,9 +148,32 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 1560px) {
+  .other-data {
+    flex-direction: column;
+  }
+
+  .about-container {
+    width: 305px;
+  }
+}
+
 @media screen and (max-width: 1255px) {
   .other-data {
     flex-direction: row;
+  }
+  .about-container {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .other-data {
+    flex-direction: column;
+  }
+
+  .about-container {
+    width: 305px;
   }
 }
 
@@ -195,7 +218,9 @@
 
 .about-container {
   border: 2px solid #e8eaf0;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
   align-content: center;
   padding-left: 20px;
   border-radius: 10px;
