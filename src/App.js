@@ -46,7 +46,6 @@ function App() {
         console.log(response.data.locations);
         setCanada(response.data.locations.slice(35, 46));
         setAustralia(response.data.locations.slice(8, 17));
-        // setAustralia(response.data.areas[17].areas);
       })
       .catch(error => {
         console.log('The data was not returned', error);
