@@ -12,11 +12,11 @@ import {
 
 export default function CanadaChart(props) {
   const data = props.canada.map(province => ({
-    name: `${province.displayName}`,
-    Total: `${province.totalConfirmed}`,
-    Deaths: `${province.totalDeaths == null ? 0 : province.totalDeaths}`,
+    name: `${province.province}`,
+    Total: `${province.latest.confirmed}`,
+    Deaths: `${province.latest.deaths == null ? 0 : province.latest.deaths}`,
     Recoveries: `${
-      province.totalRecovered == null ? 0 : province.totalRecovered
+      province.latest.recovered == null ? 0 : province.latest.recovered
     }`
   }));
 

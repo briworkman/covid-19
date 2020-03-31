@@ -4,7 +4,10 @@ import logo from '../assets/logo.svg';
 function Header() {
   return (
     <header className='App-header'>
-      <img src={logo} className='App-logo' alt='logo' />
+      <div className='logo'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <h2>COVID-19 Dashboard</h2>
+      </div>
       <a
         href='https://ko-fi.com/W7W11K588'
         target='_blank'

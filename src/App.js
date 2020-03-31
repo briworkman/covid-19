@@ -9,18 +9,23 @@ import RadialChart from './Components/RadialChart';
 import USChart from './Components/USChart';
 import CanadaChart from './Components/CanadaChart';
 import AustraliaChart from './Components/AustraliaChart';
+import EuropeChart from './Components/EuropeChart';
+import AfricaChart from './Components/AfricaChart';
+import LatinAmericaChart from './Components/LatinAmericaChart';
 
 function App() {
   const [global, setGlobal] = useState([]);
   const [usa, setUsa] = useState([]);
   const [canada, setCanada] = useState([]);
   const [australia, setAustralia] = useState([]);
+  const [countries, setCountries] = useState([]);
 
   useEffect(() => {
     axios
       .get(`https://api.covid19api.com/summary`)
       .then(response => {
         setGlobal(response.data.Countries);
+        setCountries(response.data.Countries);
       })
       .catch(error => {
         console.log('The data was not returned', error);
@@ -36,19 +41,12 @@ function App() {
       });
 
     axios
-      .get(`https://cors-anywhere.herokuapp.com/https://bing.com/covid/data`)
+      .get(`http://covid19api.xapix.io/v2/locations`)
       .then(response => {
-        setCanada(response.data.areas[14].areas);
-      })
-      .catch(error => {
-        console.log('The data was not returned', error);
-      });
-
-    axios
-      .get(`https://cors-anywhere.herokuapp.com/https://bing.com/covid/data`)
-      .then(response => {
-        console.log(response.data.areas);
-        setAustralia(response.data.areas[17].areas);
+        console.log(response.data.locations);
+        setCanada(response.data.locations.slice(35, 46));
+        setAustralia(response.data.locations.slice(8, 17));
+        // setAustralia(response.data.areas[17].areas);
       })
       .catch(error => {
         console.log('The data was not returned', error);
@@ -65,6 +63,9 @@ function App() {
           <USChart usa={usa} />
           <CanadaChart canada={canada} />
           <AustraliaChart australia={australia} />
+          <EuropeChart europe={countries} />
+          <AfricaChart africa={countries} />
+          <LatinAmericaChart latinAmerica={countries} />
         </div>
         <div className='other-data'>
           <PieChartComponent global={global} />
