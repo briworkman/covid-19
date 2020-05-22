@@ -8,15 +8,15 @@ import {
   Tooltip,
   Legend,
   Brush,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from 'recharts';
 
 export default function USChart(props) {
-  const data = props.usa.map(state => ({
+  const data = props.usa.map((state) => ({
     name: `${state.state}`,
-    Total: `${state.cases}`,
-    Deaths: `${state.deaths}`,
-    Recoveries: `${state.cases - state.active}`
+    Total: `${state.total}`,
+    Deaths: `${state.death}`,
+    Recoveries: `${state.recovered}`,
   }));
 
   return (
@@ -31,7 +31,7 @@ export default function USChart(props) {
             margin={{
               top: 5,
               right: 30,
-              bottom: 5
+              bottom: 5,
             }}
           >
             <CartesianGrid strokeDasharray='3 3' />

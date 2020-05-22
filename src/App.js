@@ -24,20 +24,20 @@ function App() {
   useEffect(() => {
     axios
       .get(`https://api.covid19api.com/summary`)
-      .then(response => {
+      .then((response) => {
         setGlobal(response.data.Countries);
         setCountries(response.data.Countries);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('The data was not returned', error);
       });
 
     axios
-      .get(`https://corona.lmao.ninja/states`)
-      .then(response => {
+      .get('https://covidtracking.com/api/states')
+      .then((response) => {
         setUsa(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('The data was not returned', error);
       });
 
@@ -45,11 +45,11 @@ function App() {
       .get(
         `https://cors-anywhere.herokuapp.com/https://covid19api.xapix.io/v2/locations`
       )
-      .then(response => {
+      .then((response) => {
         setCanada(response.data.locations.slice(35, 46));
         setAustralia(response.data.locations.slice(8, 17));
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('The data was not returned', error);
       });
   }, []);
